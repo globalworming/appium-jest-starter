@@ -22,16 +22,23 @@ rm /tmp/android_sdk.zip
 
 wget https://dl.google.com/android/repository/commandlinetools-linux-9477386_latest.zip -O /tmp/commandlinetools.zip
 unzip /tmp/commandlinetools.zip -d .
-mkdir -p sdk/platform-tools/cmdline-tools
-mv cmdline-tools sdk/platform-tools/cmdline-tools/latest
+mkdir -p sdk/cmdline-tools
+mv cmdline-tools sdk/cmdline-tools/tools
 rm /tmp/commandlinetools.zip
+mkdir sdk platforms
 ```
 ```shell
-sdk/platform-tools/cmdline-tools/latest/bin/sdkmanager --licenses
-sdk/platform-tools/cmdline-tools/latest/bin/sdkmanager --install "system-images;android-33;google_apis;x86_64"
+yes | sdk/cmdline-tools/tools/bin/sdkmanager --licenses --sdk_root=sdk
+sdk/cmdline-tools/tools/bin/sdkmanager --install "build-tools;33.0.2"  --sdk_root=sdk
+echo Y | sdk/cmdline-tools/tools/bin/sdkmanager --install "system-images;android-33;google_apis;x86_64"  --sdk_root=sdk
+sdk/cmdline-tools/tools/bin/sdkmanager --list_installed --sdk_root=sdk
 ```
 ```shell
-sdk/platform-tools/cmdline-tools/latest/bin/avdmanager --verbose create avd --force --name "pixel4" --package "system-images;android-33;google_apis;x86_64" --device "pixel_4"
+sdk/cmdline-tools/tools/bin/avdmanager --verbose create avd --force --name "pixel4" --package "system-images;android-33;google_apis;x86_64" --device "pixel_4" 
+```
+
+```shell
+ANDROID_SDK_ROOT=./sdk/ sdk/emulator/emulator -avd pixel4
 ```
 
 ```shell

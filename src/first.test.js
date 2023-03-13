@@ -17,7 +17,7 @@ const wdOpts = {
 
 describe('test', () => {
     describe("in detail", () => {
-        it ("should do something", async ()=> {
+        it ("should do something", async () => {
             const driver = await remote(wdOpts);
             try {
                 const batteryItem = await driver.$('//*[@text="Battery"]');
