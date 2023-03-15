@@ -1,5 +1,5 @@
 # appium jest starter
-thanks @rightsaidjames for trying these steps
+thanks [@rightsaidjames](https://github.com/rightsaidjames) for trying these steps
 
 ## with the end in mind
 after going through these [steps](#from-scratch), you should have the following:
