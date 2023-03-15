@@ -1,4 +1,5 @@
 # appium jest starter
+thanks @rightsaidjames for trying these steps
 
 ## with the end in mind
 after going through these [steps](#from-scratch), you should have the following:
@@ -11,8 +12,9 @@ after going through these [steps](#from-scratch), you should have the following:
 
 ## from scratch
 with
-* Linux
-* Node v19.7.0
+* Linux or Mac
+* Node
+* Java
  
 install the dependencies
 ```shell
@@ -24,13 +26,26 @@ install this driver for appium
 npm run env -- appium driver install uiautomator2
 ```
 
-get the android sdk tools
+get the android sdk tools, Linux:
 ```shell
 wget https://dl.google.com/android/repository/platform-tools_r34.0.0-linux.zip -O /tmp/android_sdk.zip
 unzip /tmp/android_sdk.zip -d sdk
 rm /tmp/android_sdk.zip
 
 wget https://dl.google.com/android/repository/commandlinetools-linux-9477386_latest.zip -O /tmp/commandlinetools.zip
+unzip /tmp/commandlinetools.zip -d .
+mkdir -p sdk/cmdline-tools
+mv cmdline-tools sdk/cmdline-tools/tools
+rm /tmp/commandlinetools.zip
+mkdir sdk/platforms
+```
+or Mac
+```shell
+wget https://dl.google.com/android/repository/platform-tools_r34.0.0-darwin.zip -O /tmp/android_sdk.zip
+unzip /tmp/android_sdk.zip -d sdk
+rm /tmp/android_sdk.zip
+
+wget https://dl.google.com/android/repository/commandlinetools-mac-9477386_latest.zip -O /tmp/commandlinetools.zip
 unzip /tmp/commandlinetools.zip -d .
 mkdir -p sdk/cmdline-tools
 mv cmdline-tools sdk/cmdline-tools/tools
