@@ -6,7 +6,7 @@ after going through these [steps](#from-scratch), you should have the following:
 * an Android SDK in the `./sdk` folder
 * a node based framework with jest and webdriverio
 * that runs all tests with `npm test` and produces a `junit.xml`results file
-* running against an emulator (you have started with the Android SDK Tools) where the example app is installed [./apk/](apk/lambdatest_proverbial_android.apk)
+* running against an emulator (you have started with the Android SDK Tools) where the example app is installed [./apk/lambdatest_proverbial_android.apk](apk)
 
 
 ## from scratch
