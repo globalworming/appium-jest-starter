@@ -1,6 +1,16 @@
-# appium jest
+# appium jest starter
+
+## with the end in mind
+after going through these steps, you should have the following:
+* a running appium server with UiAutomator2 driver https://appium.github.io/appium/docs/en/2.0/quickstart/
+* an Android SDK in the `./sdk` folder
+* a node based framework with jest and webdriverio
+* that runs all tests with `npm test` and produces a `junit.xml`results file
+* running against an emulator (you have started with the Android SDK Tools) where the example app is installed [./apk/lambdatest_proverbial_android.apk](apk/lambdatest_proverbial_android.apk)
+
 
 ## from scratch
+with
 * Linux
 * Node v19.7.0
  
