@@ -1,7 +1,7 @@
 # appium jest starter
 
 ## with the end in mind
-after going through these steps, you should have the following:
+after going through these [steps](https://github.com/globalworming/appium-jest-starter#from-scratch), you should have the following:
 * a running appium server with UiAutomator2 driver https://appium.github.io/appium/docs/en/2.0/quickstart/
 * an Android SDK in the `./sdk` folder
 * a node based framework with jest and webdriverio
