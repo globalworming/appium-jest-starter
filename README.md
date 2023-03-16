@@ -52,11 +52,14 @@ mkdir sdk/platforms
 
 accept licenses, install dependencies, a system image, and create a virtual device
 ```shell
+# you might need a different image based on your systems architecture 
+# use `sdk/cmdline-tools/tools/bin/sdkmanager --list` to see all
+image="system-images;android-33;google_apis;x86_64"
 yes | sdk/cmdline-tools/tools/bin/sdkmanager --licenses --sdk_root=sdk
 sdk/cmdline-tools/tools/bin/sdkmanager --install "build-tools;33.0.2"  --sdk_root=sdk
-echo Y | sdk/cmdline-tools/tools/bin/sdkmanager --install "system-images;android-33;google_apis;x86_64"  --sdk_root=sdk
+echo Y | sdk/cmdline-tools/tools/bin/sdkmanager --install $image  --sdk_root=sdk
 sdk/cmdline-tools/tools/bin/sdkmanager --list_installed --sdk_root=sdk
-sdk/cmdline-tools/tools/bin/avdmanager --verbose create avd --force --name "car" --package "system-images;android-33;google_apis;x86_64" --device "automotive_1024p_landscape" 
+sdk/cmdline-tools/tools/bin/avdmanager --verbose create avd --force --name "car" --package $image --device "automotive_1024p_landscape" 
 ```
 
 start the emulator
@@ -118,11 +121,14 @@ mkdir sdk/platforms
 
 accept licenses, install dependencies, a system image, and create a virtual device
 ```shell
+# you might need a different image based on your systems architecture 
+# use `sdk/cmdline-tools/tools/bin/sdkmanager --list` to see all
+image="system-images;android-33;google_apis;arm64-v8a"
 yes | sdk/cmdline-tools/tools/bin/sdkmanager --licenses --sdk_root=sdk
 sdk/cmdline-tools/tools/bin/sdkmanager --install "build-tools;33.0.2"  --sdk_root=sdk
-echo Y | sdk/cmdline-tools/tools/bin/sdkmanager --install "system-images;android-33;google_apis;arm64-v8a"  --sdk_root=sdk
+echo Y | sdk/cmdline-tools/tools/bin/sdkmanager --install $image  --sdk_root=sdk
 sdk/cmdline-tools/tools/bin/sdkmanager --list_installed --sdk_root=sdk
-sdk/cmdline-tools/tools/bin/avdmanager --verbose create avd --force --name "car" --package "system-images;android-33;google_apis;x86_64" --device "automotive_1024p_landscape" 
+sdk/cmdline-tools/tools/bin/avdmanager --verbose create avd --force --name "car" --package $image --device "automotive_1024p_landscape" 
 ```
 
 start the emulator
