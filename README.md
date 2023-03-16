@@ -81,6 +81,9 @@ npm run appium
 npm run test
 ```
 
+  
+please [let me know](https://github.com/globalworming/appium-jest-starter/issues/new) when you run into issues
+
 </details>
 <details>
   <summary>with Mac:</summary>
@@ -146,11 +149,12 @@ npm run appium
 ```shell
 npm run test
 ```
+  
+please [let me know](https://github.com/globalworming/appium-jest-starter/issues/new) when you run into issues
+
 
 </details>
 
 ## locating elements
 get the appium inspector or use the browser version https://inspector.appiumpro.com/, get the capabilities json from [src/first.test.js](https://github.com/globalworming/appium-jest-starter/blob/main/src/first.test.js#L3) to connect.
 
-
-please [let me know](https://github.com/globalworming/appium-jest-starter/issues/new) when you run into issues
